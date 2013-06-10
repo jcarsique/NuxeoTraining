@@ -183,17 +183,40 @@ Can define additional shemas
 ##Access rights
 </section>
 
-<section class="slide" id="acl">
-###ACL
-Remember [previous seen ACL section](1.1_Nuxeo DM Installation and Demo.html#acl)
+<section class="slide" id="acl1">
+###Access Rights
+####Default permissions
+- Read
+- Delete (+ Read)
+- Write (+ Delete + Read)
+- Manage Everything
 
-####Access Control Entry (ACE)
+<div class="further-info">Some permissions are composed of sub permissions. See http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.security.SecurityService--permissions for existing permissions.</div>
+
+####Access Control Entry - ACE
 - Triplet
   - Principal (user/group)
   - Permission
   - Grant/Deny
-- For instance: <code>members - Read - grant</code>
+- For instance: `members - Read - grant`
 </section>
+
+<section class="slide" id="acl2">
+###Access Rights
+####Acces Control List (ACL)
+- List of ACEs
+- ACEs on the top are overridden by the bottom ones
+
+####Access Control Policy (ACP)
+List of ACLs applied to a document
+
+- Inherited ACL (1)
+- Local ACL (2)
+
+#### Blocking inheritance
+Technically `Everyone - Deny - Everything` applyed to the first ACE of the local ACL.
+</section>
+
 
 <section class="slide" id="bundles-h2">
 ##Bundles

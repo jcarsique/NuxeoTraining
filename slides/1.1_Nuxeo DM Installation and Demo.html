@@ -363,40 +363,6 @@ Metadata can be set on Workspaces, Folders and Sections
 ![Access rights](img/access-rights-interface.png)
 </section>
 
-<section class="slide" id="acl2">
-###Access Rights (2/3)
-####Default permissions
-- Read
-- Delete (+ Read)
-- Write (+ Delete + Read)
-- Manage Everything
-
-<div class="further-info">Some permissions are composed of sub permissions. See http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.security.SecurityService--permissions for existing permissions.</div>
-
-####Access Control Entry - ACE (3)
-- Triplet
-  - Principal (user/group)
-  - Permission
-  - Grant/Deny
-- For instance: `members - Read - grant`
-</section>
-
-<section class="slide" id="acl3">
-###Access Rights (3/3)
-####Acces Control List (ACL)
-- List of ACE
-- ACEs on the top overrided by the bottom ones
-
-####Access Control Policy (ACP)
-List of ACL applied to a document
-
-- Inherited ACL (1)
-- Local ACL (2)
-
-#### Bloking inheritance
-Technically `Everyone - Deny - Everything` apply on the first ACE of the local ACL.
-</section>
-
 <section class="slide" id="versioning">
 ###Versioning
 ####Don't want to copy and rename
