@@ -159,10 +159,10 @@ Configures
 <div class="further-info">Users have a Home tab, that offers user-centric tabs</div>
 
 ####User-centric tabs that provide access to
-- Personal Dashboard
+- Personal dashboard
 - Profile
 - Local preferences
-- Subscribed Notifications
+- Subscribed notifications
 - etc ...
 
 http://doc.nuxeo.com/x/ZIWo
@@ -176,7 +176,7 @@ http://doc.nuxeo.com/x/ZIWo
 
 
 <section class="slide" >
-###Admin Center Tabs
+###Admin Center Tab
 ![Admin center sysinfo](img/Admin-Center-sysinfo.png)
 </section>
 
@@ -184,22 +184,22 @@ http://doc.nuxeo.com/x/ZIWo
 <section class="slide" id="admincenter">
 ###Admin Center Tab
     
-####Provides administratives services
+####Provides administrative services
     
 - Server and application usage summary information 
-    - System information tab provides information about the server the Nuxeo Platform is installed on, about your instance configuration
+    - System information tab provides information about the server the Nuxeo Platform is installed on, about the instance configuration
     - Activity enables administrators to have information and statistics on the application
 
-- Access to upgrades, patches, the Nuxeo Marketplace, and Nuxeo Studio projects
+- Access to hotfixes, the Nuxeo Marketplace, and Nuxeo Studio projects
     
-    - Nuxeo Connect enables you to connect your Nuxeo instance with your Nuxeo Connect account 
-    - Update Center provides all the updates you can need (updates and patches, Nuxeo Marketplace packages, direct access to your Nuxeo Studio packages, local packages)
+    - Nuxeo Connect enables you to bind your Nuxeo instance to the Nuxeo Connect server with your Nuxeo Connect account 
+    - Update Center provides all the updates you can need (hotfixes, Nuxeo Marketplace packages, direct access to your Nuxeo Studio packages, local packages)
 - Monitoring 
     - Monitoring enables administrators to monitor some technical information and display messages to users
 - Application exploitation     
     - Users & Groups  enables administrators to create, edit, delete users and groups of users
-    - Vocabularies enables administrators to customize and adapt the values displayed in lists in the application.
-    - Themes gives administrators access to Nuxeo Themes, that enables them to create new themes for the application.
+    - Vocabularies enables administrators to customize and adapt the values displayed in lists in the application
+    - Themes gives administrators access to Nuxeo Themes, that enables them to create new themes for the application
 </section>
 
 
@@ -225,14 +225,14 @@ http://doc.nuxeo.com/x/bYao
 
 
 <section class="slide" id="whatisadocument">
-###What is a document ?
-####Not just a « file ».
-- Set of metadatas (Title, Creation date, File, ...)
+###What is a document?
+####Not just a « file »
+- Set of metadatas (title, creation date, file, ...)
 - Typed metadatas (string, date, content, complex types, ...)
 
-####An instance of a Document type (File, Note, Module, Lesson, Invoice, Contract, …)
-- Is defined by a set of metadata grouped by schema
-- Has a specific lifecycle (ie Draft->Valid->Archived)
+####An instance of a Document type (File, Note, Module, Lesson, Invoice, Contract, ...)
+- Is defined by a set of metadata grouped by schemas
+- Has a specific lifecycle (ie. Draft -> Valid -> Archived)
 - Can be inherited (Module extends Folder)
 - Has facets (Folderish, Versionable, Commentable, ...)
 </section>
@@ -308,7 +308,7 @@ Non "Folderish" documents
   - Tags
   - Comments
   - Tasks
-  - etc ...
+  - etc
 </section>
 
 <section class="slide">
@@ -327,10 +327,10 @@ Non "Folderish" documents
 ###Domain Document type
 
 - Sections, workspaces and templates are grouped in domains
-- A domain can be considered as a mini-application in Nuxeo or a root in the application.
+- A domain can be considered as a mini-application in Nuxeo or a root in the application
 - Typically you can use domains to open the application to two or more very different populations of users
     - For instance, you can have an "intranet" domain and an "extranet" domain
-- Domains are can be totally independent or not, depending on the access rights you set on each domain.
+- Domains can be totally independent or not, depending on the access rights you set on each domain
 - Nuxeo Documentation  http://doc.nuxeo.com/x/XoWo
 
 </section>
@@ -339,28 +339,28 @@ Non "Folderish" documents
 ### Domain default structure
 <img class="float-right" alt="domain" src="img/domain.png">
 ####Workspaces
-A Workspace is for a group of users that work together, usually preferences (security, notifications) are set on Workspaces
+A Workspace is for a group of users who work together, usually preferences (security, notifications) are set on Workspaces
 ####Folders
 Inside a Workspace, to organize content
 #### Sections
 To publish content
 ####Templates
-pre-initialize a Workspace structure.
+Pre-initialize a Workspace structure
 </section>
 
 <section class="slide" id="acl">
-###Access Rights (1/3)
+###Access Rights
 
-####Available for
-- All "Folderish" documents
-- "Manage everything" right
+####Can be managed
+- On all "Folderish" documents
+- By users who have the "Manage everything" permission
 
 http://doc.nuxeo.com/x/UYEk
 </section>
 
 <section class="slide" id="acl-DM">
 ###Access Rights
-####Manage tab, Access rights
+####Manage tab > Access rights sub-tab
 ![Access rights](img/access-rights-interface.png)
 </section>
 
@@ -402,18 +402,18 @@ Technically `Everyone - Deny - Everything` apply on the first ACE of the local A
 ###Versioning
 ####Don't want to copy and rename
 
-- On Edit tab while saving
+- On Edit tab before saving, can
 
     - Skip version increment
     - Increment minor version
     - Increment major version
 
-- Versions available
+- Versions available in the History tab > Archived versions sub-tab
 
-    - History tab, Archived versions
-    - View versions
-    - Restore
-    - Compare (With the nuxeo-diff addon) 
+    - View a version
+    - Restore a version
+    - Delete a version
+    - Compare 2 versions (with the nuxeo-diff addon) 
 
 </section>
 
@@ -423,7 +423,7 @@ Technically `Everyone - Deny - Everything` apply on the first ACE of the local A
 <section class="slide" id="publication">
 ###Publication
 #### Document published
- - from workspaces (Publish tab of a document)
+ - from Workspaces (Publish tab of a document)
  - into Sections
 ![publication](img/publishing-tab.png)
  
@@ -447,13 +447,12 @@ Technically `Everyone - Deny - Everything` apply on the first ACE of the local A
 ###Publication Workflow
 #### Built-in publishing workflow
 
-- User with only Read permission on the Section needs approval from section manager to validate the publishing 
-- User with the Write permission on the Section will publish without approval
-
-- Permission for ability to publish managed from the section
+- User with only Read permission on the Section needs approval from a Section manager to validate the publishing 
+- User with the Write permission on the Section will publish without needing approval
+- Permission for ability to publish is managed from a Section
 
 #### Publishing targets 
-- Preferences of publishing targets managed from the workspace in the Manage tab
+- Preferences of publishing targets managed from a Workspace in the Manage tab
  
 ![Publication workflow](img/publishing-rights.png)
 </section>
@@ -481,13 +480,13 @@ Technically `Everyone - Deny - Everything` apply on the first ACE of the local A
 <img alt="Faceted search" src="img/DM-faceted-search-tab.png" class="float-right"/>
     
 - Easy way to browse the content of your application
-    - By creating filters on the content of the application
+    - By creating filters on the content
 - You can filter content using:
     - Keywords (full text search based on stemming)
     - Dates (creation and last modification dates)
     - Author
-    - Documents categorization (nature, coverage, subjects of documents)
-    - Location of the documents in the folders
+    - Document categorization (nature, coverage, subjects of documents)
+    - Location of the documents in the hierarchy
  
 - Faceted search is available with the DM module of the Platform, on the left hand side of the page
 
@@ -525,8 +524,8 @@ http://doc.nuxeo.com/x/MoEk
 </section>
 
 <section class="slide" id="next">
-###Next ?
-- Back to the [training agenda](0_Introduction.html#day-1)
+###Next?
+- Back to the [Training agenda](0_Introduction.html#day-1)
 - Next chapter: [Technical overview](1.1.1_Technical overview.html)
 </section>
 

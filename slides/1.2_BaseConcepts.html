@@ -49,40 +49,40 @@
   </div>
   
 <section class="slide" id="opening">
-Nuxeo Training - Base concepts
+Nuxeo - Base concepts
 ===================
 
 </section>
 
 <section class="slide" id="agenda">
 ### Nuxeo Base concepts
-- What's a document
-- schemas
-- facets    
-- ACL
+- What is a document
+- Schemas
+- Facets    
+- ACLs
 - Bundle
 - VCS basics
 - nuxeo.conf
 </section>
 
 <section class="slide" id="whatsadocument-h2">
-##What's a document ?
+##What is a document?
 </section>
 
 <section class="slide" id="whatisadocument">
-###What is a document ?
-####Not just a « file ».
-- Set of metadatas (Title, Creation date, File, ...)
+###What is a document?
+####Not just a « file »
+- Set of metadatas (title, creation date, file, ...)
 - Typed metadatas (string, date, content, complex types, ...)
 
-####An instance of a Document type (File, Note, Module, Lesson, Invoice, Contract, …)
-- Define a set of metadatas <div class="further-info">Actually a set of schema, see next pages</div>
+####An instance of a Document type (File, Note, Module, Lesson, Invoice, Contract, ...)
+- Defines a set of metadatas <div class="further-info">Actually a set of schema, see next pages</div>
 - Has a specific lifecycle (Draft, Valid, Archived)
 - Can be Versionable
 - Can be Folderish <div class="further-info">Any folder in Nuxeo is a document and contains documents + metadatas </div>
 - Can be locked by a user
 
-Create your own document types !
+Create your own document types with Nuxeo Studio!
 </section>
 
 
@@ -97,11 +97,11 @@ Create your own document types !
 
 <section class="slide" id="schemas">
 ###Schemas
-####Metadata stored in schemas
+####Metadatas are stored in schemas
 - Unique name
 - Set of typed metadatas
-- Reusable by multiple Doctypes
-- A Doctype actually defines a set of schemas
+- Reusable by multiple Document types
+- A Document type actually defines a set of schemas
 
 #### Example: File document type
 Is made of
@@ -114,7 +114,7 @@ Is made of
 </section>
 
 <section class="slide" id="dublincore">
-###dublincore schema
+###`dublincore` schema
 Defined in almost all document types
 
 - Title <div class="further-info">Most important metadata of the document: Label of the document everywhere in the UI</div>
@@ -136,22 +136,22 @@ This date is not indexed in the system. It is just in indication for users but i
 </section>
 
 <section class="slide" id="common-uid">
-###common and uid schemas
+###`common` and `uid` schemas
 ####common schema
 - icon
 
 ####uid schema
-- version minor
-- version major
+- minor version
+- major version
 </section>
 
 <section class="slide" id="file-files">
-###file and files schemas
+###`file` and `files` schemas
 ####file schema
-content: blob
+- content: blob
 
 ####files schema
-list of content
+- list of contents
 </section>
 
 <section class="slide" id="facets-h2">
@@ -180,7 +180,7 @@ Can define additional shemas
 
 
 <section class="slide" id="acl-h2">
-##ACL
+##Access rights
 </section>
 
 <section class="slide" id="acl">
@@ -202,10 +202,10 @@ Remember [previous seen ACL section](1.1_Nuxeo DM Installation and Demo.html#acl
 <section class="slide" id="nuxeo-runtime">
 ###Bundles
 - 1 bundle = 1 Nuxeo plugin
-- located in <code>nxserver/bundles</code> as jar files
-- extension mechanism: Extension point (xml files)
-- loaded by Nuxeo Runtime
-- more than 200 plugins in Nuxeo CAP
+- Located in <code>nxserver/bundles</code> as jar files
+- Extension mechanism: extension points (XML files)
+- Loaded by Nuxeo Runtime
+- More than 200 bundles in Nuxeo CAP
 </section>
 
 <section class="slide" id="vcs-h2">
@@ -217,7 +217,7 @@ Remember [previous seen ACL section](1.1_Nuxeo DM Installation and Demo.html#acl
 - Nuxeo persistance layer <div class="further-info">Nuxeo part that is in charge of persisting document object into the database</div>
 - Nuxeo schemas mapped to tables <div class="further-info">A schema in Nuxeo is mapped to a table in the database (= clean SQL mapping)</div> 
 - DBA friendly <div class="further-info">A DBA can easily query, dump, run statistics on the database in the usual way</div>
-- Support Multiple database <div class="further-info">PostgreSQL, Oracle, MySQL, MS SQL Server, H2, Derby.</div>
+- Multiple database support <div class="further-info">PostgreSQL, Oracle, MySQL, MS SQL Server, H2, Derby.</div>
 - DBA level optimization <div class="further-info"> A DBA can set up additional indexes (this is fine tuning, not needed in common use cases)</div> 
 - DBA level updates and migration <div class="further-info">Migration, updates, ... should be very simple</div>
 
@@ -248,8 +248,8 @@ Available properties: http://doc.nuxeo.com/x/QQA7
 </section>
 
 <section class="slide" id="next">
-###Next ?
-- Back to the [training agenda](0_Introduction.html#day-1)
+###Next?
+- Back to the [Training agenda](0_Introduction.html#day-1)
 - Next chapter: [Introduction to Nuxeo Studio](1.3_Nuxeo Studio.html)
 </section>
     
