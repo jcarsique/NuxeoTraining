@@ -436,10 +436,10 @@ Metadata can be set on Workspaces, Folders and Sections
 <section class="slide" id="advanced-search">
 ###Searching the Nuxeo Platform
 
-####Full text query engine
-    
-- Designed to recognize all the specific parameters the application provides
-- Documents are indexed using their title, description, content (note field, attached files), and metadata.
+####Metadatas as search indexes
+
+- By default documents implement the Dublincore metadata set: title, description, creator, ...
+- Some metadatas are automatically updated : ex: Last modification date, Contributors
 
 #### Several ways to search the content of the application
 - Simple search, can be accessed from any site page
@@ -473,9 +473,10 @@ See documentation <a href="http://doc.nuxeo.com/x/YIWo" target="_blank"">here</a
 ###Fulltext search
 <img alt="Full text Search" src="img/search-box.png" class="float-right"/>
     
-- Any text metadatas indexed
-- Office, pdf, text, html files are full-text indexed <div class="further-info">thanks to a text extraction from the document itself</div>
-- Relies on the database (Oracle, Postgres or MSSQL Server) full text capabilities
+- Some text metadatas are full-text indexed: title, description (this is configurable)
+- Content of Office, pdf, text, html files is full-text indexed <div class="further-info">thanks to a text extraction from the document itself</div>
+- Expressions available for full-text search: « hello world OR foo -bar » looks for all documents containing both hello and world, or documents containing foo but not bar
+- Relies on the database (Oracle, PostgreSQL or MSSQL Server) full text capabilities
   - Linguistic support <div class="further-info">Searching for the word "satisfies", will match the documents containing "satisfy"</div>
   - Optimized for searching
 </section>
